@@ -3,6 +3,8 @@ import Header from '../layouts/Header'
 import Banner from '../layouts/Banner'
 import About from './About'
 import Popular from '../layouts/Popular'
+import Streming from '../layouts/Streming'
+import Sale from '../layouts/Sale'
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
     <Banner/>
     <About/>
     <Popular/>
+    <Streming/>
+    <Sale/>
     </>
   )
 }

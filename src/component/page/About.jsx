@@ -3,17 +3,20 @@ import Container from "../Container";
 import Image from "../Image";
 import leftone from "/src/assets/imgone.png";
 import { FaCheck } from "react-icons/fa";
+import Flex from "../Flex";
 
 const About = () => {
   return (
     <div className="bg-[#121212] py-6">
       <Container>
+        <Flex>
         <div className="flex items-center gap-3 group relative">
           <h2 className="text-white text-[38px] font-semibold font-fahim w-[518px] mb-2">
             ABOUT THE BIGGEST HANCOCK COMMUNITY
           </h2>
           <span className="h-[2px] absolute bg-red-500 w-0 transition-all duration-500 group-hover:w-40 mt-22 ml-50"></span>
         </div>
+        </Flex>
         <div className="flex items-center mt-7 justify-between">
           <div className="">
             <Image imgSrc={leftone} />
@@ -67,6 +70,7 @@ const About = () => {
           </div>
         
         </div>
+        
       </Container>
     </div>
   );

@@ -33,37 +33,37 @@ const Popular = () => {
             </h2>
             <span className="h-[2px] absolute bg-red-500 w-0 transition-all duration-500 group-hover:w-40 mt-22 mr-30"></span>
           </div>
-          <div className="py-[50px] mt-8">
+          <div className="py-[50px] mt-8 gap-x-2">
              <Slider {...settings}>
         <div>
-        <Image imgSrc={imgonee} className={'h-[250px] w-[400px]'}/>
+        <Image imgSrc={imgonee} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-           <Image imgSrc={imgtwoo} className={'h-[250px] w-[400px]'}/>
+           <Image imgSrc={imgtwoo} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-          <Image imgSrc={imgthree} className={'h-[250px] w-[400px]'}/>
+          <Image imgSrc={imgthree} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-          <Image imgSrc={imgfour} className={'h-[250px] w-[400px]'}/>
+          <Image imgSrc={imgfour} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-          <Image imgSrc={imgfive} className={'h-[250px] w-[400px]'}/>
+          <Image imgSrc={imgfive} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-         <Image imgSrc={imgsix} className={'h-[250px] w-[400px]'}/>
+         <Image imgSrc={imgsix} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-          <Image imgSrc={imgseven} className={'h-[250px] w-[400px]'}/>
+          <Image imgSrc={imgseven} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-          <Image imgSrc={imgeight} className={'h-[250px] w-[400px]'}/>
+          <Image imgSrc={imgeight} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-          <Image imgSrc={imgnine} className={'h-[250px] w-[400px]'}/>
+          <Image imgSrc={imgnine} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
         <div>
-          <Image imgSrc={imgten} className={'h-[250px] w-[400px]'}/>
+          <Image imgSrc={imgten} className={'h-[250px] w-[400px] border  hover:border-cyan-500 hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] transition-all duration-300'}/>
         </div>
       </Slider>
           </div>
@@ -75,3 +75,7 @@ const Popular = () => {
 };
 
 export default Popular;
+
+
+// hover:border-cyan-400 
+//   hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)]

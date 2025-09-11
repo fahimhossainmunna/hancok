@@ -48,6 +48,25 @@ const About = () => {
             </p>
           </div>
         </div>
+        <div className="flex items-center justify-between mt-12">
+          <div className="py-[25px] px-[100px] bg-[#212121] rounded-bl-[70px] rounded-tr-[70px]">
+            <h3 className="text-white text-[60px] font-semibold font-munna">112 k</h3>
+            <p className="text-white text-[18px] font-light font-fahim">Community Earning</p>
+          </div>
+          <div className="py-[25px] px-[100px] bg-[#212121] rounded-bl-[70px] rounded-tr-[70px]">
+            <h3 className="text-white text-[60px] font-semibold font-munna">12M</h3>
+            <p className="text-white text-[18px] font-light font-fahim">Total Member</p>
+          </div>
+          <div className="py-[25px] px-[100px] bg-[#212121] rounded-bl-[70px] rounded-tr-[70px]">
+            <h3 className="text-white text-[60px] font-semibold font-munna">100 k</h3>
+            <p className="text-white text-[18px] font-light font-fahim">Streams Complete</p>
+          </div>
+          <div className="py-[25px] px-[100px] bg-[#212121] rounded-bl-[70px] rounded-tr-[70px]">
+            <h3 className="text-white text-[60px] font-semibold font-munna">844 k</h3>
+            <p className="text-white text-[18px] font-light font-fahim">Total Sponsers</p>
+          </div>
+        
+        </div>
       </Container>
     </div>
   );

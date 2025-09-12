@@ -44,7 +44,7 @@ const Streming = () => {
         <h3 className="text-[32px] text-white font-medium font-munna">TEAM DELTA</h3>
       </div>
     </div>
-    <div className="text-[40px] text-white font-medium font-fahim">
+    <div className="text-[65px] text-white font-medium font-fahim">
         <h3>9:12</h3>
     </div>
     <div className="flex justify-center items-center ">
@@ -63,7 +63,7 @@ const Streming = () => {
         <h3 className="text-[32px] text-white font-medium font-munna">TEAM DEVILS</h3>
       </div>
     </div>
-    <div className="text-[40px] text-white font-medium font-fahim">
+    <div className="text-[65px] text-white font-medium font-fahim">
         <h3>17:8</h3>
     </div>
     <div className="flex justify-center items-center ">

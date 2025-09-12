@@ -4,6 +4,8 @@ import Flex from "../Flex";
 import Image from "../Image";
 import logo from "/src/assets/Navbar.png";
 import { FaGlobe, FaSignOutAlt, FaSearch } from "react-icons/fa";
+import { FaBarsProgress } from "react-icons/fa6";
+
 
 // =============
 const Header = () => {
@@ -13,6 +15,9 @@ const Header = () => {
         <Flex className={"fixed flex items-center justify-between w-[1320px]"}>
           <div className="">
             <Image imgSrc={logo} />
+            <div className="text-[#FF4655] text-2xl">
+              <FaBarsProgress/>
+            </div>
           </div>
           <div className="">
             <ul className="flex items-center gap-x-4 text-[16px] font-fahim text-[#DDDDDD]">

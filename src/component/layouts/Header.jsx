@@ -1,48 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
 import logo from "/src/assets/Navbar.png";
-import { FaGlobe, FaSignOutAlt, FaSearch } from "react-icons/fa";
+import { FaGlobe, FaSignOutAlt, FaSearch, FaTimes } from "react-icons/fa";
 import { FaBarsProgress } from "react-icons/fa6";
 
-
-// =============
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Smooth scroll handler
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const headerOffset = 80; // fixed header height adjust
+      const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      setMenuOpen(false);
+    }
+  };
+
+  const menuItems = [
+    { name: "Home", id: "home" },
+    { name: "About us", id: "about" },
+    { name: "Game", id: "game" },
+    { name: "Streamin", id: "streamin" },
+    { name: "Sale", id: "sale" },
+    { name: "Team", id: "team" },
+    { name: "FAQ", id: "faq" },
+    { name: "Contact Us", id: "contact" },
+  ];
+
   return (
-    <>
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#0c0c0c]/90 backdrop-blur-md shadow-[0_0_10px_rgba(255,70,85,0.2)] py-4 transition-all duration-300">
       <Container>
-        <Flex className={"fixed flex items-center justify-between w-[1320px]"}>
-          <div className="">
-            <Image imgSrc={logo} />
-            <div className="text-[#FF4655] text-2xl">
-              <FaBarsProgress/>
-            </div>
+        <Flex className="items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-x-4">
+            <Image imgSrc={logo} className="w-[110px] hover:scale-105 transition-transform duration-300" />
           </div>
-          <div className="">
-            <ul className="flex items-center gap-x-4 text-[16px] font-fahim text-[#DDDDDD]">
-              <li className="hover:font-bold transition-all duration-200">Home</li>
-              <li className="hover:font-bold transition-all duration-200">About us</li>
-              <li className="hover:font-bold transition-all duration-200">Tornament</li>
-              <li className="hover:font-bold transition-all duration-200">Store</li>
-              <li className="hover:font-bold transition-all duration-200">Team</li>
-              <li className="hover:font-bold transition-all duration-200">FAQ</li>
-              <li className="hover:font-bold transition-all duration-200">Contact Us</li>
-            </ul>
-          </div>
-          <div className="flex items-center gap-x-3 text-[#ffff]">
-            <FaGlobe />
-            <div className="flex items-center">
-              <FaSignOutAlt />
-              <span className="text-[16px] font-fahim text-[#ffffff]">
-                Sign In
-              </span>
+
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center gap-x-6 text-[16px] font-fahim text-[#DDDDDD]">
+            {menuItems.map((item) => (
+              <li
+                key={item.id}
+                onClick={() => handleScroll(item.id)}
+                className="cursor-pointer hover:text-[#FF4655] transition-all duration-300 relative group"
+              >
+                {item.name}
+                <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-[#FF4655] group-hover:w-full transition-all duration-300"></span>
+              </li>
+            ))}
+          </ul>
+
+          {/* Right Icons */}
+          <div className="flex items-center gap-x-5 text-white text-lg">
+            <FaGlobe className="cursor-pointer hover:text-[#FF4655] transition-transform duration-300 hover:scale-110" />
+            <div className="hidden md:flex items-center gap-x-2 cursor-pointer hover:text-[#FF4655] transition">
+              <FaSignOutAlt className="hover:rotate-12 transition-transform duration-300" />
+              <span className="text-[16px] font-fahim">Sign In</span>
             </div>
-            <FaSearch />
+            <FaSearch className="cursor-pointer hover:text-[#FF4655] transition-transform duration-300 hover:scale-110" />
+            <div
+              className="md:hidden text-[#FF4655] text-2xl cursor-pointer hover:rotate-90 transition-transform duration-300"
+              onClick={() => setMenuOpen(true)}
+            >
+              <FaBarsProgress />
+            </div>
           </div>
         </Flex>
       </Container>
-    </>
+
+      {/* Mobile Drawer */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[70%] bg-[#121212] text-white p-6 transform transition-transform duration-500 ease-in-out ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } z-[999] shadow-[-6px_0_12px_rgba(0,0,0,0.4)]`}
+      >
+        <div className="flex justify-between items-center mb-6 border-b border-gray-700 pb-3">
+          <h2 className="text-[#FF4655] text-xl font-semibold tracking-wide">Menu</h2>
+          <FaTimes
+            onClick={() => setMenuOpen(false)}
+            className="text-2xl cursor-pointer hover:text-[#FF4655] transition-transform duration-300 hover:rotate-90"
+          />
+        </div>
+
+        <ul className="flex flex-col gap-4 text-[18px] font-fahim">
+          {menuItems.map((item) => (
+            <li
+              key={item.id}
+              onClick={() => handleScroll(item.id)}
+              className="cursor-pointer hover:text-[#FF4655] transition-all duration-300 border-b border-gray-700 pb-2 hover:translate-x-2"
+            >
+              {item.name}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 flex items-center gap-x-3 text-[#DDDDDD] group cursor-pointer hover:text-[#FF4655] transition-all duration-300">
+          <FaSignOutAlt className="group-hover:rotate-12 transition-transform duration-300" />
+          <span className="text-[16px] font-fahim">Sign In</span>
+        </div>
+      </div>
+    </header>
   );
 };
 

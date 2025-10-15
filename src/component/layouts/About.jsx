@@ -22,8 +22,12 @@ const About = () => {
         {/* About Section */}
         <div className="flex flex-col lg:flex-row items-center mt-10 justify-between gap-10">
           {/* Left Image */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-            <Image imgSrc={leftone} className="rounded-[20px] shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:scale-105 transition-all duration-500" />
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start overflow-hidden rounded-[20px]">
+            {/* overflow-hidden যোগ করা হয়েছে */}
+            <Image
+              imgSrc={leftone}
+              className="rounded-[20px] shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-transform duration-500 ease-in-out hover:scale-105"
+            />
           </div>
 
           {/* Right Content */}

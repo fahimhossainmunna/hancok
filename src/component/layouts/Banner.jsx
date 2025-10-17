@@ -7,7 +7,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 const Banner = () => {
   return (
     <div className="bg-[url('/image/banner.png')] bg-no-repeat bg-center bg-cover w-full pt-[180px] pb-[100px] md:pt-[200px] relative">
-      <div className="absolute inset-0 bg-black/50"></div> {/* overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black/30"></div> {/* overlay for better text visibility */}
       <Container>
         <div className="relative z-10">
           {/* Text Section */}

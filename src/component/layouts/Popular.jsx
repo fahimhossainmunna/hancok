@@ -60,7 +60,7 @@ const Popular = () => {
   ];
 
   return (
-    <div className="bg-[url('/image/gameTwo.jpg')] bg-no-repeat bg-cover bg-center py-[80px] md:py-[100px] relative z-10">
+    <div className="bg-[url('/image/gameTwo.jpg')] bg-no-repeat bg-cover bg-center py-[80px] md:py-[100px] relative z-10 overflow-hidden">
       {/* Overlay for dark premium effect */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
 

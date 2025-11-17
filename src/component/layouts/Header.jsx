@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <>
       {/* ===== Header Navbar ===== */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-[#0c0c0c]/90 backdrop-blur-md shadow-[0_0_10px_rgba(255,70,85,0.2)] py-4 transition-all duration-300">
+      <header className="fixed top-0 left-0 w-full z-50 bg-[#0c0c0c]/90 backdrop-blur-md shadow-[0_0_10px_rgba(255,70,85,0.2)] py-4 transition-all duration-300 ">
         <Container>
           <Flex className="items-center justify-between">
             {/* Logo */}
@@ -112,14 +112,17 @@ const Header = () => {
           />
         </div>
 
+        {/* ===== Mobile Menu with Moving Line Effect ===== */}
         <ul className="flex flex-col gap-4 text-[18px] font-fahim">
           {menuItems.map((item) => (
             <li
               key={item.id}
               onClick={() => handleScroll(item.id)}
-              className="cursor-pointer hover:text-[#FF4655] transition-all duration-300 border-b border-gray-700 pb-2 hover:translate-x-2"
+              className="relative group cursor-pointer hover:text-[#FF4655] transition-all duration-700 border-b border-gray-700 pb-2 hover:translate-x-2"
             >
               {item.name}
+              {/* Moving underline effect */}
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#FF4655] transition-all duration-500 ease-out group-hover:w-full"></span>
             </li>
           ))}
         </ul>

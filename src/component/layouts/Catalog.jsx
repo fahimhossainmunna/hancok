@@ -49,27 +49,27 @@ const Catalog = () => {
               {/* Left back images */}
               <Image
                 imgSrc={cOne}
-                className="absolute left-[20px] top-[50px] w-[220px] h-[300px] z-0 opacity-90 hover:scale-110 transition-all duration-300"
+                className="absolute left-[20px] top-[50px] w-[220px] h-[300px] z-0 opacity-90 hover:scale-110 hover:z-60 transition-all duration-300"
               />
               <Image
                 imgSrc={cOnei}
-                className="absolute left-[90px] top-[100px] w-[240px] h-[320px] z-10 opacity-95 hover:scale-110 transition-all duration-300"
+                className="absolute left-[90px] top-[100px] w-[240px] h-[320px] z-10 opacity-95 hover:scale-110 hover:z-60 transition-all duration-300"
               />
 
               {/* ✅ Center main image (hero) */}
               <Image
                 imgSrc={cOneii}
-                className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[270px] h-[360px] z-30 hover:scale-110 transition-all duration-300"
+                className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[270px] h-[360px] z-30 hover:scale-110 hover:z-30 transition-all duration-300"
               />
 
               {/* Right back images */}
               <Image
                 imgSrc={cOneiii}
-                className="absolute right-[90px] top-[100px] w-[240px] h-[320px] z-10 opacity-95 hover:scale-110 transition-all duration-300"
+                className="absolute right-[90px] top-[100px] w-[240px] h-[320px] z-10 opacity-95 hover:scale-110 hover:z-30 transition-all duration-300"
               />
               <Image
                 imgSrc={cOneiiii}
-                className="absolute right-[20px] top-[50px] w-[220px] h-[300px] z-0 opacity-90 hover:scale-110 transition-all duration-300"
+                className="absolute right-[20px] top-[50px] w-[220px] h-[300px] z-0 opacity-90 hover:scale-110 hover:z-30 transition-all duration-300"
               />
             </div>
 

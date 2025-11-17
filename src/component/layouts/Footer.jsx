@@ -19,21 +19,22 @@ const Footer = () => {
   return (
     <div className="bg-[#121212] py-[50px] text-white">
       <Container>
-       
+        
         {/* Footer Section */}
-        <footer className=" border-t border-gray-800 pt-14">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16">
+        <footer className="border-t border-gray-800 pt-14">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 text-center md:text-left">
+
             {/* Logo and About */}
-            <div>
+            <div className="mx-auto md:mx-0">
               <h2 className="text-2xl font-bold mb-3">
                 Hancock <span className="text-red-500">.</span>
               </h2>
-              <p className="text-gray-400 text-sm leading-relaxed mb-5">
+              <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-[350px] mx-auto md:mx-0">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
                 vero officiis rem consectetur sunt cupiditate eius obcaecati,
                 culpa, aspernatur aperiam id.
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 justify-center md:justify-start">
                 <a
                   href="#"
                   className="bg-[#2c2c2c] p-3 rounded-full hover:bg-[#ff4d57] transition"
@@ -62,7 +63,7 @@ const Footer = () => {
             </div>
 
             {/* Links */}
-            <div>
+            <div className="mx-auto md:mx-0">
               <h3 className="text-lg font-semibold mb-4 tracking-wide">
                 LINKS
               </h3>
@@ -75,7 +76,7 @@ const Footer = () => {
             </div>
 
             {/* Teams */}
-            <div>
+            <div className="mx-auto md:mx-0">
               <h3 className="text-lg font-semibold mb-4 tracking-wide">
                 TEAMS
               </h3>
@@ -88,11 +89,11 @@ const Footer = () => {
             </div>
 
             {/* Gallery */}
-            <div>
+            <div className="mx-auto md:mx-0">
               <h3 className="text-lg font-semibold mb-4 tracking-wide">
                 GALLERY
               </h3>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2 justify-items-center">
                 <Image imgSrc={fonei} alt="Gallery" className="rounded-sm object-cover" />
                 <Image imgSrc={foneii} alt="Gallery" className="rounded-sm object-cover" />
                 <Image imgSrc={foneiii} alt="Gallery" className="rounded-sm object-cover" />

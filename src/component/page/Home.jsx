@@ -15,8 +15,7 @@ const Home = () => {
   return (
     <>
       <Header />
-
-      {/* Each section must have ID to enable scroll */}
+      
       <section id="home">
         <Banner />
       </section>
